@@ -1,0 +1,26 @@
+﻿@model List<UserPost>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact List</title>
+</head>
+<body>
+    <h1>Contact List</h1>
+
+    
+        <div class="d-flex flex-wrap">
+            @foreach (var post in Model)
+            {
+                <div class="card" style="width: 18rem">
+                    <div class="card-body">
+                        <h5 class="card-title">@post.Title</h5>
+                        <p class="card-text">By: @post.Name</p>
+                        <p class="card-text">@post.Content</p>
+
+                    </div>
+                </div>
+            }
+        </div>
+</body>
+</html>
